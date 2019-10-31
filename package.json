@@ -15,11 +15,13 @@
     "cross-env": "^5.2.0",
     "element-ui": "^2.4.11",
     "koa": "^2.6.2",
-    "nuxt": "^2.0.0"
+    "nuxt": "^2.0.0",
+    "vue-masonry": "^0.11.8"
   },
   "devDependencies": {
     "@vue/test-utils": "^1.0.0-beta.27",
     "babel-jest": "^24.1.0",
+    "babel-plugin-component": "^1.1.1",
     "jest": "^24.1.0",
     "node-sass": "^4.13.0",
     "nodemon": "^1.18.9",

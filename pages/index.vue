@@ -1,6 +1,6 @@
 <template>
-  <div class="jay-wrap">
-    <div class="masonry" style="position:relative;height:5000px;">
+  <div class="masonry-wrap">
+    <div class="masonry" v-masonry origin-left="true" transition-duration="1s" column-width=".grid-sizer" item-selector=".masonry__brick">
       <div class="grid-sizer"></div>
       <article class="masonry__brick entry format-standard">
         <div class="entry__thumb">

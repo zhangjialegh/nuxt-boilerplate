@@ -1960,7 +1960,7 @@ input::-moz-focus-inner {
  * common and reusable styles
  * ------------------------------------------------------------------- */
 @media screen and (max-width:1800px) {
-  .jay-wrap {
+  .masonry-wrap {
     max-width: 1260px;
   }
 
@@ -2010,7 +2010,7 @@ input::-moz-focus-inner {
 }
 
 @media screen and (max-width:1500px) {
-  .jay-wrap {
+  .masonry-wrap {
     max-width: 900px;
   }
 
@@ -2041,7 +2041,7 @@ input::-moz-focus-inner {
 }
 
 @media screen and (max-width:1100px) {
-  .jay-wrap,
+  .masonry-wrap,
   .listing-header {
     width: 89%;
     max-width: 900px;
@@ -2055,7 +2055,7 @@ input::-moz-focus-inner {
     font-size: 4.6rem;
   }
 
-  .jay-wrap {
+  .masonry-wrap {
     max-width: 580px;
   }
 
@@ -2084,7 +2084,7 @@ input::-moz-focus-inner {
     font-size: 4.2rem;
   }
 
-  .jay-wrap,
+  .masonry-wrap,
   .listing-header {
     width: auto;
     max-width: 500px;
@@ -2114,7 +2114,7 @@ input::-moz-focus-inner {
     margin-bottom: 5.6rem;
   }
 
-  .jay-wrap,
+  .masonry-wrap,
   .listing-header {
     padding-left: 22px;
     padding-right: 22px;
@@ -2158,7 +2158,7 @@ input::-moz-focus-inner {
   vertical-align: top;
   position: fixed;
   bottom: 0;
-  top: 90px;
+  top: 0px;
   left: 0;
 }
 

@@ -4,9 +4,9 @@
       <div class="grid-sizer"></div>
       <article class="masonry__brick entry format-standard">
         <div class="entry__thumb">
-          <a href="" class="entry__thumb-link">
+          <nuxt-link to="/standard" class="entry__thumb-link">
             <img src="http://demo.cssmoban.com/cssthemes6/sstp_9_Typerite/images/thumbs/masonry/rucksack-600.jpg" alt="http://demo.cssmoban.com/cssthemes6/sstp_9_Typerite/images/thumbs/masonry/rucksack-600.jpg">
-          </a>
+          </nuxt-link>
         </div>
         <div class="entry__text">
           <div class="entry__header">

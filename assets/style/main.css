@@ -113,7 +113,7 @@ h1, .h1 {
 }
 
 h2, .h2 {
-  font-size: 3rem;
+  font-size: 2.4rem;
   line-height: 1.2;
 }
 
@@ -193,7 +193,7 @@ small {
 
 blockquote {
   margin: 4rem 0;
-  padding: 4rem 4rem;
+  padding: 0 2rem;
   border-left: 4px solid black;
   position: relative;
 }
@@ -216,7 +216,6 @@ blockquote p {
   font-family: "Lora", serif;
   font-weight: 400;
   padding: 0;
-  font-size: 2.4rem;
   line-height: 1.833;
   color: #000000;
 }
@@ -266,7 +265,7 @@ pre {
 
 pre {
   padding: 2.4rem 3.2rem 3.2rem;
-  background: #efefef;
+  background: none repeat scroll 0 0 #efefef;
   overflow-x: auto;
 }
 
@@ -276,21 +275,24 @@ code {
   padding: 0.4rem 0.8rem;
   white-space: nowrap;
   background: #efefef;
-  border: 1px solid #d3d3d3;
   color: #000000;
   border-radius: 3px;
 }
-
-pre > code {
+pre.prettyprint {
+  background-color: #efefef;
+  box-shadow: 0 1px 2px rgba(255, 255, 255, 0.1) inset, 45px 0 0 rgba(102, 128, 153, 0.05) inset, 0 1px 0 rgba(102, 128, 153, 0.05);
+}
+pre code {
   display: block;
   white-space: pre;
   line-height: 2;
   padding: 0;
   margin: 0;
 }
-
-pre.prettyprint > code {
-  border: none;
+@media screen and (min-width: 800px) {
+  pre code {
+    white-space: pre-line;
+  }
 }
 
 del {
@@ -1496,8 +1498,8 @@ input::-moz-focus-inner {
   max-width: 1000px;
 }
 
-.display-1 {
-  font-size: 5.6rem;
+.content__page h1 {
+  font-size: 3.2rem;
   line-height: 1.143;
   letter-spacing: -0.05rem;
   margin-top: 0;
@@ -1861,7 +1863,7 @@ input::-moz-focus-inner {
 .format-quote blockquote p,
 .format-link .link-wrap h2 {
   font-family: "Heebo", sans-serif;
-  font-size: 2.8rem;
+  font-size: 2.4rem;
   font-weight: 400;
   line-height: 1.429;
   color: #000000;
@@ -2034,8 +2036,8 @@ input::-moz-focus-inner {
 }
 
 @media screen and (max-width:1400px) {
-  .display-1 {
-    font-size: 5.2rem;
+  .content__page h1 {
+    font-size: 3rem;
   }
 
 }
@@ -2051,8 +2053,8 @@ input::-moz-focus-inner {
 }
 
 @media screen and (max-width:800px) {
-  .display-1 {
-    font-size: 4.6rem;
+  .content__page h1 {
+    font-size: 2.8rem;
   }
 
   .masonry-wrap {
@@ -2080,8 +2082,8 @@ input::-moz-focus-inner {
 }
 
 @media screen and (max-width:600px) {
-  .display-1 {
-    font-size: 4.2rem;
+  .content__page h1 {
+    font-size: 2.8rem;
   }
 
   .masonry-wrap,
@@ -2099,15 +2101,15 @@ input::-moz-focus-inner {
 }
 
 @media screen and (max-width:500px) {
-  .display-1 {
-    font-size: 4rem;
+  .content__page h1 {
+    font-size: 2.7rem;
   }
 
 }
 
 @media screen and (max-width:400px) {
-  .display-1 {
-    font-size: 3.7rem;
+  .content__page h1 {
+    font-size: 2.6rem;
   }
 
   .media-wrap {

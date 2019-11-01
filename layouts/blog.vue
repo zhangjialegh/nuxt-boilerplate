@@ -130,12 +130,54 @@
       </div>
       <back-to-top/>
     </footer>
+
+    <!-- <viewer :options="options" :images="images" class="viewer" ref="viewer">
+      <img v-for="src in images" :src="src" :key="src">
+    </viewer> -->
+    <div class="v-viewer-images" v-viewer="{movable: false}" v-show="false">
+      <img v-for="src in images" :src="src" :key="src">
+    </div>
   </div>
 </template>
 <script>
 import BackToTop from '@/components/BackToTop'
+import Vue from 'vue'
 export default {
-  components: {BackToTop}
+  components: {BackToTop},
+  data () {
+    return {
+      images: [],
+      options: {
+
+      }
+    }
+  },
+  created() {
+    this.inited()
+  },
+  methods: {
+    inited () {
+      const vm = this
+      Vue.Bus.$on('imgs', (params) => {
+        if (Array.isArray(params.imgs)) {
+          vm.images = params.imgs
+        } else {
+          console.log(params, 'mmmm')
+          vm.$notify({
+            title: '警告',
+            message: '图片参数错误',
+            type: 'warning'
+          });
+          return
+        }
+      })
+      Vue.Bus.$on('viewer', (params) => {
+        const viewer = this.$el.querySelector('.v-viewer-images').$viewer
+        const index = params.index || 0
+        viewer.view(index)
+      })
+    }
+  }
 };
 </script>
 <style>

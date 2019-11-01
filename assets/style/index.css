@@ -1,0 +1,7 @@
+@import "./base.css";
+@import "./vendor.css";
+@import "./main.css";
+
+.viewer-toolbar > ul > li {
+  padding: 0;
+}

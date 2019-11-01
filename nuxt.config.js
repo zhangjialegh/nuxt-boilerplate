@@ -22,14 +22,16 @@ module.exports = {
   ** Global CSS
   */
   css: [
-    '@/assets/style/index.scss'
+    '@/assets/style/index.css'
   ],
   /*
   ** Plugins to load before mounting the App
   */
   plugins: [
     '@/plugins/element-ui',
-    { src: '@/plugins/masonry', ssr: false }
+    '@/plugins/v-viewer',
+    { src: '@/plugins/masonry', ssr: false },
+    '@/plugins/bus'
   ],
   /*
   ** Nuxt.js dev-modules

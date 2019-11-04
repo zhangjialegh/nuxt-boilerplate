@@ -1,0 +1,8 @@
+POST http://localhost:3001/api/blogs/insert HTTP/1.1
+content-type: application/json
+
+{
+  "author": "zjl",
+  "label": "js",
+  "content": "<h1>微信网页开发</h1>"
+}

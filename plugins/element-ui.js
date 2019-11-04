@@ -147,13 +147,13 @@ const components = [
 
 // set
 Vue.use(Loading.directive)
-Vue.prototype.$loading = Loading.service
+Vue.Loading = Vue.prototype.$loading = Loading.service
 Vue.prototype.$msgbox = MessageBox
-Vue.prototype.$alert = MessageBox.alert
-Vue.prototype.$confirm = MessageBox.confirm
-Vue.prototype.$prompt = MessageBox.prompt
-Vue.prototype.$notify = Notification
-Vue.prototype.$message = Message
+Vue.Alert = Vue.prototype.$alert = MessageBox.alert
+Vue.Confirm = Vue.prototype.$confirm = MessageBox.confirm
+Vue.Prompt = Vue.prototype.$prompt = MessageBox.prompt
+Vue.Notify = Vue.prototype.$notify = Notification
+Vue.Message = Vue.prototype.$message = Message
 
 // import components
 components.forEach(component => {

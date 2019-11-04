@@ -28,10 +28,12 @@ module.exports = {
   ** Plugins to load before mounting the App
   */
   plugins: [
+    { src: '@/plugins/masonry', ssr: false },
+    { src: '@/plugins/mavon-editor', srr: false },
     '@/plugins/element-ui',
     '@/plugins/v-viewer',
-    { src: '@/plugins/masonry', ssr: false },
-    '@/plugins/bus'
+    '@/plugins/bus',
+    '@/plugins/axios'
   ],
   /*
   ** Nuxt.js dev-modules
@@ -42,7 +44,25 @@ module.exports = {
   ** Nuxt.js modules
   */
   modules: [
+    '@nuxtjs/axios',
+    '@nuxtjs/proxy'
   ],
+  axios: {
+    retry: {retries:3},
+    debug: process.env._ENV == 'production' ? false : true,
+    
+    baseURL: process.env._ENV === 'production' ? 'http://localhost:3000' : 'http://localhost:3000',
+    withCredentials: true
+  },
+  proxy: {
+    '/api': {
+      target: 'http://localhost:3001',
+      changeOrigin: true,
+      pathRewrite: {
+        '^/api': ''
+      }
+    }
+  },
   /*
   ** Build configuration
   */

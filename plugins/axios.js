@@ -1,9 +1,6 @@
 import qs from 'qs'
 
-export default function({
-  $axios,
-  redirect
-}) {
+export default function({ $axios, redirect }) {
   $axios.onRequest(config => {
     config.data = qs.stringify(config.data, {
       allowDots: true

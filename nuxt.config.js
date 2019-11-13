@@ -48,18 +48,17 @@ module.exports = {
     '@nuxtjs/proxy'
   ],
   axios: {
-    retry: {retries:3},
-    debug: process.env._ENV == 'production' ? false : true,
-    
-    baseURL: process.env._ENV === 'production' ? 'http://localhost:3000' : 'http://localhost:3000',
-    withCredentials: true
+    // retry: {retries:3},
+    // debug: process.env._ENV == 'production' ? false : true,
+    // baseURL: process.env._ENV === 'production' ? 'http://localhost:3000' : 'http://localhost:3000',
+    // withCredentials: true,
+    proxy: true
   },
   proxy: {
     '/api': {
       target: 'http://localhost:3001',
-      changeOrigin: true,
       pathRewrite: {
-        '^/api': ''
+        '^/api': '/api'
       }
     }
   },

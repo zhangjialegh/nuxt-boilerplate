@@ -11,31 +11,33 @@
       <div class="grid-sizer"></div>
       <article class="masonry__brick entry" :class="{'format-standard': item.cover,'format-quote': !item.cover}" v-for="(item, index) in articles" :key="item.id+''+index">
         <div class="entry__thumb" v-if="item.cover">
-          <nuxt-link to="/standard" class="entry__thumb-link">
+          <nuxt-link :to="'/demo?id='+ item.id" class="entry__thumb-link">
             <img
               :src="item.cover"
               :alt="item.cover"
             />
           </nuxt-link>
         </div>
-        <div class="entry__text" :class="{entry_hover: !item.cover}">
-          <div class="entry__header">
-            <h2 class="entry__title">
-              <a href>{{item.title}}</a>
-            </h2>
-            <div class="entry__meta">
-              <span class="entry__meta-cat">
-                <a href v-for="(lab, i) in item.label.split(',').slice(0,2)" :key="lab+i">{{lab}}</a>
-              </span>
-              <span class="entry__meta-date">
-                <a href>{{item.createdAt}}</a>
-              </span>
+        <nuxt-link :to="'/demo?id='+ item.id">
+          <div class="entry__text" :class="{entry_hover: !item.cover}">
+            <div class="entry__header">
+              <h2 class="entry__title">
+                <a href>{{item.title}}</a>
+              </h2>
+              <div class="entry__meta">
+                <span class="entry__meta-cat">
+                  <a href v-for="(lab, i) in item.label.split(',').slice(0,2)" :key="lab+i">{{lab}}</a>
+                </span>
+                <span class="entry__meta-date">
+                  <a href>{{item.createdAt}}</a>
+                </span>
+              </div>
+            </div>
+            <div class="entry__excerpt">
+              <p>{{sliceSummary(item.summary, item.cover)}}...</p>
             </div>
           </div>
-          <div class="entry__excerpt">
-            <p>{{sliceSummary(item.summary, item.cover)}}...</p>
-          </div>
-        </div>
+        </nuxt-link>
       </article>
       <!-- <article class="masonry__brick entry format-quote">
         <div class="entry__thumb">
